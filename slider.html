@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.38.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+</head>
+<body class="bg-base-100 px-6 py-8 text-slate-700">
+    <div class="max-w-screen-sm mx-auto">
+        <h3 class="text-2xl text-center font-semibold">
+            Component Idea: Phone Number Slider
+        </h3>
+        <p class="my-4">
+            So the idea is, never let your client spent a little amount of time
+            either in the login page or in the register page. Make sure they are
+            having a good experience by having a little fun sliding those
+            component.
+        </p>
+        <p class="my-4">
+            User will spent approximately more than one hour to get their phone
+            number correctly in place. To make it even better, make sure you have
+            "required" attribute on both of the inputs.
+        </p>
+        <div class="form-control" x-data="{ phone: 0 }">
+            <label for="phonePrimary" class="label">
+                <span class="label-text">Primary Phone Number</span>
+            </label>
+            <p x-html="'+' + phone"></p>
+            <input
+                type="range"
+                class="range range-primary mt-2"
+                step="0.001"
+                x-model="phone"
+                min="00000000000000"
+                max="99999999999999"
+            />
+        </div>
+    
+        <div class="form-control mt-8 pt-4 border-t border-base-300" x-data="{ phone: 0 }">
+            <label for="phoneSecondary" class="label">
+                <span class="label-text">Secondary Phone Number</span>
+            </label>
+            <p x-html="'+' + phone"></p>
+            <input
+                type="range"
+                class="range range-secondary mt-2"
+                step="0.001"
+                x-model="phone"
+                min="00000000000000"
+                max="99999999999999"
+            />
+        </div>
+
+        <footer class="mt-12">
+            <p>
+                Have a feedback? Give me some words at:
+            </p>
+
+            <div class="flex flex-col gap-1.5 mt-2">
+                <a href="mailto:yourlovelydev@gmail.com" class="flex items-center">
+                    <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><polyline points="224 56 128 144 32 56" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+                    <span class="ml-1">yourlovelydev@gmail.com</span>
+                </a>
+                <a href="https://github.com/NikarashiHatsu" class="flex items-center">
+                    <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M84,240a23.9,23.9,0,0,0,24-24V168" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><path d="M172,240a23.9,23.9,0,0,1-24-24V168" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><path d="M152,168h16a23.9,23.9,0,0,1,24,24v8a23.9,23.9,0,0,0,24,24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><path d="M104,168H88a23.9,23.9,0,0,0-24,24v8a23.9,23.9,0,0,1-24,24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><path d="M111.8,64A52,52,0,0,0,68,40a52,52,0,0,0-3.5,44.7A49.3,49.3,0,0,0,56,112v8a48,48,0,0,0,48,48h48a48,48,0,0,0,48-48v-8a49.3,49.3,0,0,0-8.5-27.3A52,52,0,0,0,188,40a52,52,0,0,0-43.8,24Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>
+                    <span class="ml-1">NikarashiHatsu</span>
+                </a>
+                <a href="https://github.com/NikarashiHatsu" class="flex items-center">
+                    <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><path d="M168,88H152a23.9,23.9,0,0,0-24,24V224" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><line x1="96" y1="144" x2="160" y2="144" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line></svg>
+                    <span class="ml-1">Aghits Nidallah</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
